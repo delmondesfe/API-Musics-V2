@@ -1,1 +1,3 @@
-# API Musics V2
+# API de teste
+# Utilizando Django Rest Framework
+# SQLite e
