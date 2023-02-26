@@ -1,6 +1,8 @@
 from rest_framework import generics
 from ..models.musicDTO import Music
+from ..models.livrosDTO import Livros
 from ..serializers import MusicSerializer
+from ..serializers import LivrosSerializer
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status, permissions, serializers
 from rest_framework.response import Response
@@ -11,6 +13,10 @@ class MusicList(generics.ListCreateAPIView):
 
     queryset = Music.objects.all()
     serializer_class = MusicSerializer
+    
+class LivrosList(generics.ListCreateAPIView):
+    queryset = Livros.objects.all()
+    serializer_class = LivrosSerializer
     
     
 class ContactForm(serializers.Serializer):
